@@ -15,28 +15,14 @@ angular.module('app.controllers', ['ngCordova'])
       // called asynchronously if an error occurs
       // or server returns response with an error status.
     });
-
   };
 }])
 
-.controller('scanCtrl', function($scope, $rootScope, $cordovaBarcodeScanner, $ionicPlatform) {
+.controller('scanCtrl', function($scope, $rootScope) {
   $rootScope.items = [];
   $scope.scanBarcode = function() {
-    $cordovaBarcodeScanner.scan().then(function(imageData) {
-            $http({
-              method: 'GET',
-              url: imageData
-            }).then(function successCallback(response) {
-                $rootScope.items.push(imageData.text +" "+response);
-            }, function errorCallback(response) {
-                $rootScope.items.push(imageData.text +" "+response);
-            });
-        }, function(error) {
-            console.log("An error happened -> " + error);
-        });
+                $rootScope.items.push("ertertert");
     };
-
-
 })
 
 .controller('logsCtrl', function($scope, $rootScope) {
