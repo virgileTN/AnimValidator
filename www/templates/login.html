@@ -1,0 +1,21 @@
+<ion-view title="Login ">
+    <ion-content padding="true" class="has-header">
+        <div class="spacer" style="width: 300px; height: 51px;"></div>
+        <form class="list">
+            <label class="item item-input" ng-show="logged">
+                <span class="input-label" >Logged as {{username}}</span><textarea placeholder=""> </textarea>
+            </label>
+            <label class="item item-input" ng-hide="logged">
+                <span class="input-label">Nom d'utilisateur :</span>
+                <input type="text" placeholder="">
+            </label>
+            <label class="item item-input" ng-hide="logged">
+                <span class="input-label">Mot de passe :</span>
+                <input type="password" placeholder="">
+            </label>
+        </form>
+        <div class="spacer" style="width: 300px; height: 15px;"></div>
+        <button class="button button-positive button-block button-large" ng-hide="logged">Connexion</button>
+        <button class="button button-assertive button-block " ng-show="logged">Déconnexion</button>
+    </ion-content>
+</ion-view>
